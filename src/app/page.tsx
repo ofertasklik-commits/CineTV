@@ -168,7 +168,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className="main-wrapper" suppressHydrationWarning>
       <svg xmlns="http://www.w3.org/2000/svg" style={{ display: 'none' }}>
         <symbol id="ico-tv" viewBox="0 0 24 24"><path d="M21 3H3a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h7v2H8v2h8v-2h-2v-2h7a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm0 14H3V5h18v12z"/></symbol>
         <symbol id="ico-smartphone" viewBox="0 0 24 24"><path d="M17 1H7a2 2 0 0 0-2 2v18a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 18H7V5h10v14zm-4 2h-2v1h2v-1z"/><circle cx="12" cy="20" r="1"/></symbol>
@@ -468,16 +468,16 @@ export default function Home() {
             </div>
             
               <div className="streaming-grid fade-in">
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Max_logo.svg" alt="Max" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Paramount_Plus_logo.svg" alt="Paramount+" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Logo_Globoplay.svg/512px-Logo_Globoplay.svg.png" alt="Globoplay" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/pt/thumb/b/be/Canal_Combate_logo.png/300px-Canal_Combate_logo.png" alt="Combate" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/pt/thumb/d/d4/Premiere_Logo.png/300px-Premiere_Logo.png" alt="Premiere" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Logo_Telecine.svg/512px-Logo_Telecine.svg.png" alt="Telecine" /></div>
+                <div className="platform-logo"><img src="https://logo.clearbit.com/netflix.com" alt="Netflix" /></div>
+                <div className="platform-logo"><img src="https://logo.clearbit.com/disneyplus.com" alt="Disney+" /></div>
+                <div className="platform-logo"><img src="https://logo.clearbit.com/max.com" alt="Max" /></div>
+                <div className="platform-logo"><img src="https://logo.clearbit.com/primevideo.com" alt="Prime Video" /></div>
+                <div className="platform-logo"><img src="https://logo.clearbit.com/paramountplus.com" alt="Paramount+" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Logo_Globoplay.svg/256px-Logo_Globoplay.svg.png" alt="Globoplay" /></div>
+                <div className="platform-logo"><img src="https://logo.clearbit.com/espn.com" alt="ESPN" /></div>
+                <div className="platform-logo"><img src="https://logo.clearbit.com/combate.com" alt="Combate" /></div>
+                <div className="platform-logo"><img src="https://logo.clearbit.com/hbo.com" alt="HBO" /></div>
+                <div className="platform-logo"><img src="https://www.vectorlogo.zone/logos/discovery/discovery-ar21.svg" alt="Discovery" /></div>
               </div>
 
             <div className="streaming-footer-text fade-in">
@@ -1019,7 +1019,13 @@ export default function Home() {
             filter: grayscale(0) opacity(1); /* No mobile vamos deixar colorido direto pois não tem hover */
           }
         }
+
+        .main-wrapper {
+          min-height: 100vh;
+          display: flex;
+          flex-direction: column;
+        }
       `}</style>
-    </>
+    </div>
   );
 }
