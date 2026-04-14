@@ -467,18 +467,18 @@ export default function Home() {
               <p>Acesse as maiores plataformas de streaming e canais premium sem precisar de várias assinaturas.</p>
             </div>
             
-            <div className="streaming-grid fade-in">
-              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" /></div>
-              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" /></div>
-              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Max_logo.svg" alt="Max" /></div>
-              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video" /></div>
-              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Paramount_Plus.svg" alt="Paramount+" /></div>
-              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Logo_Globoplay.svg" alt="Globoplay" /></div>
-              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/ESPN_wordmark.svg" alt="ESPN" /></div>
-              <div className="platform-logo"><img src="https://logodownload.org/wp-content/uploads/2017/11/canal-combate-logo.png" alt="Combate" /></div>
-              <div className="platform-logo"><img src="https://logodownload.org/wp-content/uploads/2018/10/premiere-logo-0.png" alt="Premiere" /></div>
-              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Logo_Telecine.svg" alt="Telecine" /></div>
-            </div>
+              <div className="streaming-grid fade-in">
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Max_logo.svg" alt="Max" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Paramount_Plus_logo.svg" alt="Paramount+" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Logo_Globoplay.svg/512px-Logo_Globoplay.svg.png" alt="Globoplay" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/ESPN_wordmark.svg/512px-ESPN_wordmark.svg.png" alt="ESPN" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/pt/thumb/b/be/Canal_Combate_logo.png/300px-Canal_Combate_logo.png" alt="Combate" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/pt/thumb/d/d4/Premiere_Logo.png/300px-Premiere_Logo.png" alt="Premiere" /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Logo_Telecine.svg/512px-Logo_Telecine.svg.png" alt="Telecine" /></div>
+              </div>
 
             <div className="streaming-footer-text fade-in">
               <p>E muito mais... São mais de <strong>2.500 canais</strong> e <strong>50.000 títulos</strong> esperando por você.</p>
