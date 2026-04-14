@@ -544,6 +544,7 @@ export default function Home() {
                   period: '/mês',
                   oneScreenPrice: '30,00',
                   twoScreensPrice: '50,00',
+                  monthlyText: '',
                 },
                 {
                   name: 'Trimestral',
@@ -553,6 +554,24 @@ export default function Home() {
                   discountText: screensCount === 1 ? '16% OFF' : '',
                   badge: 'Mais Popular',
                   featured: true,
+                  monthlyText: 'Equivale a R$ 25,00/mês',
+                },
+                {
+                  name: 'Semestral',
+                  period: '/6 meses',
+                  oneScreenPrice: '130,00',
+                  twoScreensPrice: '240,00',
+                  discountText: screensCount === 1 ? '27% OFF' : '',
+                  monthlyText: 'Equivale a R$ 21,66/mês',
+                },
+                {
+                  name: 'Anual',
+                  period: '/ano',
+                  oneScreenPrice: '220,00',
+                  twoScreensPrice: '400,00',
+                  discountText: screensCount === 1 ? '38% OFF' : '',
+                  badge: 'Super Oferta',
+                  monthlyText: 'Equivale a R$ 18,33/mês',
                 },
               ];
 
