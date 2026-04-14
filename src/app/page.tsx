@@ -459,6 +459,34 @@ export default function Home() {
           </div>
         </section>
 
+        {/* STREAMING & SPORTS SHOWCASE */}
+        <section className="streaming-showcase">
+          <div className="container">
+            <div className="section-title fade-in">
+              <h2>O Melhor do Entretenimento <span className="accent">em um Só Lugar</span></h2>
+              <p>Acesse as maiores plataformas de streaming e canais premium sem precisar de várias assinaturas.</p>
+            </div>
+            
+            <div className="streaming-grid fade-in">
+              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix" /></div>
+              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Disney%2B_logo.svg" alt="Disney+" /></div>
+              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Max_logo.svg" alt="Max" /></div>
+              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/1/11/Amazon_Prime_Video_logo.svg" alt="Prime Video" /></div>
+              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Paramount_Plus.svg" alt="Paramount+" /></div>
+              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Logo_Globoplay.svg" alt="Globoplay" /></div>
+              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/ESPN_wordmark.svg" alt="ESPN" /></div>
+              <div className="platform-logo"><img src="https://logodownload.org/wp-content/uploads/2017/11/canal-combate-logo.png" alt="Combate" /></div>
+              <div className="platform-logo"><img src="https://logodownload.org/wp-content/uploads/2018/10/premiere-logo-0.png" alt="Premiere" /></div>
+              <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Logo_Telecine.svg" alt="Telecine" /></div>
+            </div>
+
+            <div className="streaming-footer-text fade-in">
+              <p>E muito mais... São mais de <strong>2.500 canais</strong> e <strong>50.000 títulos</strong> esperando por você.</p>
+              <button className="btn-primary" style={{ marginTop: '2.5rem' }} onClick={() => { setIsModalOpen(true); setModalStep('form'); }}>Pedir Teste Grátis Agora</button>
+            </div>
+          </div>
+        </section>
+
         {/* HOW IT WORKS */}
         <section className="how">
           <div className="container">
@@ -931,6 +959,65 @@ export default function Home() {
           text-align: center;
           font-size: 0.85rem;
           color: #666;
+        }
+
+        /* STREAMING SHOWCASE STYLES */
+        .streaming-showcase {
+          padding: 80px 0;
+          background: linear-gradient(to bottom, #060608, #0a0a0c);
+          position: relative;
+          overflow: hidden;
+        }
+        .streaming-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+          gap: 30px;
+          align-items: center;
+          justify-items: center;
+          margin: 50px 0;
+        }
+        .platform-logo {
+          width: 100%;
+          max-width: 120px;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          filter: grayscale(1) opacity(0.5);
+          transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .platform-logo:hover {
+          filter: grayscale(0) opacity(1);
+          transform: scale(1.1);
+          drop-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
+        }
+        .platform-logo img {
+          max-width: 100%;
+          max-height: 100%;
+          object-fit: contain;
+        }
+        .streaming-footer-text {
+          text-align: center;
+          margin-top: 40px;
+        }
+        .streaming-footer-text p {
+          color: #888;
+          font-size: 1.1rem;
+        }
+        .streaming-footer-text strong {
+          color: #fff;
+          font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+          .streaming-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+          }
+          .platform-logo {
+            height: 40px;
+            filter: grayscale(0) opacity(1); /* No mobile vamos deixar colorido direto pois não tem hover */
+          }
         }
       `}</style>
     </>
