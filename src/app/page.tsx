@@ -189,7 +189,7 @@ export default function Home() {
       </svg>
 
       <header className="header">
-        <div className="header-inner">
+        <div className="header-inner" suppressHydrationWarning>
           <a href="#" className="logo">
             <img src="/logo.jpg" alt="Cine TV Logo" style={{ width: '40px', height: '40px', borderRadius: '8px', objectFit: 'cover', border: '1px solid rgba(255,255,255,0.1)' }} />
             Cine <span>TV</span>
@@ -207,7 +207,7 @@ export default function Home() {
         </div>
       </header>
 
-      <div className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
+      <div className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`} suppressHydrationWarning>
         <a href="#canais" onClick={() => setIsMobileMenuOpen(false)}>Canais</a>
         <a href="#dispositivos" onClick={() => setIsMobileMenuOpen(false)}>Dispositivos</a>
         <a href="#planos" onClick={() => setIsMobileMenuOpen(false)}>Planos</a>
@@ -218,7 +218,7 @@ export default function Home() {
       <main>
         {/* HERO */}
         <section className="hero" id="canais">
-          <div className="container hero-inner">
+          <div className="container hero-inner" suppressHydrationWarning>
             <div className="hero-content fade-in">
               <div className="badge">
                 <img className="badge-favicon" src="https://www.google.com/s2/favicons?domain=google.com&sz=32" alt="" width="18" height="18" />
@@ -467,17 +467,15 @@ export default function Home() {
               <p>Acesse as maiores plataformas de streaming e canais premium sem precisar de várias assinaturas.</p>
             </div>
             
-              <div className="streaming-grid fade-in">
-                <div className="platform-logo"><img src="https://logo.clearbit.com/netflix.com" alt="Netflix" /></div>
-                <div className="platform-logo"><img src="https://logo.clearbit.com/disneyplus.com" alt="Disney+" /></div>
-                <div className="platform-logo"><img src="https://logo.clearbit.com/max.com" alt="Max" /></div>
-                <div className="platform-logo"><img src="https://logo.clearbit.com/primevideo.com" alt="Prime Video" /></div>
-                <div className="platform-logo"><img src="https://logo.clearbit.com/paramountplus.com" alt="Paramount+" /></div>
-                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Logo_Globoplay.svg/256px-Logo_Globoplay.svg.png" alt="Globoplay" /></div>
-                <div className="platform-logo"><img src="https://logo.clearbit.com/espn.com" alt="ESPN" /></div>
-                <div className="platform-logo"><img src="https://logo.clearbit.com/combate.com" alt="Combate" /></div>
-                <div className="platform-logo"><img src="https://logo.clearbit.com/hbo.com" alt="HBO" /></div>
-                <div className="platform-logo"><img src="https://www.vectorlogo.zone/logos/discovery/discovery-ar21.svg" alt="Discovery" /></div>
+              <div className="streaming-grid fade-in" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', alignItems: 'center', justifyItems: 'center' }}>
+                <div className="platform-logo"><img src="https://www.vectorlogo.zone/logos/netflix/netflix-ar21.svg" alt="Netflix" style={{ width: '100%', height: 'auto', maxHeight: '100%', objectFit: 'contain', transform: 'scale(1.1)' }} /></div>
+                <div className="platform-logo"><img src="/hbo.png" alt="HBO Max" style={{ width: '100%', height: 'auto', maxHeight: '100%', objectFit: 'contain' }} /></div>
+                <div className="platform-logo"><img src="/prime.png" alt="Prime Video" style={{ width: '100%', height: 'auto', maxHeight: '100%', objectFit: 'contain', transform: 'scale(1.2)' }} /></div>
+                <div className="platform-logo"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Paramount_Plus.svg" alt="Paramount+" style={{ width: '100%', height: 'auto', maxHeight: '100%', objectFit: 'contain', transform: 'scale(1.3)' }} /></div>
+                <div className="platform-logo"><img src="/globoplay.png" alt="Globoplay" style={{ width: '100%', height: 'auto', maxHeight: '100%', objectFit: 'contain' }} /></div>
+                <div className="platform-logo"><img src="/espn.png" alt="ESPN" style={{ width: '100%', height: 'auto', maxHeight: '100%', objectFit: 'contain' }} /></div>
+                <div className="platform-logo"><img src="/combate.png" alt="Combate" style={{ width: '100%', height: 'auto', maxHeight: '100%', objectFit: 'contain', transform: 'scale(0.8)' }} /></div>
+                <div className="platform-logo"><img src="/discovery.png" alt="Discovery" style={{ width: '100%', height: 'auto', maxHeight: '100%', objectFit: 'contain', transform: 'scale(1.8)', filter: 'brightness(0) invert(1)' }} /></div>
               </div>
 
             <div className="streaming-footer-text fade-in">
@@ -978,18 +976,18 @@ export default function Home() {
         }
         .platform-logo {
           width: 100%;
-          max-width: 120px;
-          height: 60px;
+          max-width: 160px;
+          height: 80px;
           display: flex;
           align-items: center;
           justify-content: center;
-          filter: grayscale(1) opacity(0.5);
+          filter: brightness(0) invert(1) opacity(0.6);
           transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .platform-logo:hover {
-          filter: grayscale(0) opacity(1);
+          filter: brightness(1) invert(0) opacity(1);
           transform: scale(1.1);
-          drop-shadow: 0 0 15px rgba(255, 107, 0, 0.3);
+          filter: drop-shadow(0 0 10px rgba(255, 107, 0, 0.4));
         }
         .platform-logo img {
           max-width: 100%;
@@ -1016,7 +1014,7 @@ export default function Home() {
           }
           .platform-logo {
             height: 40px;
-            filter: grayscale(0) opacity(1); /* No mobile vamos deixar colorido direto pois não tem hover */
+            filter: brightness(1) invert(0) opacity(1);
           }
         }
 
